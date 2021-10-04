@@ -11,7 +11,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{$post->title}}</h5>
                     <p class="card-text">
-                        {{ $post->get_excerp }}
+                        {{ $post->get_excerpt }}
                         <a href="{{ route('post', $post) }}">Leer más</a>
                     </p>
                     <p class="text-muted mb-0">
