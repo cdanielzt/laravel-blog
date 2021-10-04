@@ -6,10 +6,12 @@
         <div class="col-md-8">
             @foreach($posts as $post)
             <div class="card mb-4">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header"> 
+                    <h5 class="card-title">{{$post->title}}</h5>
+                </div>
 
                 <div class="card-body">
-                    <h5 class="card-title">{{$post->title}}</h5>
+                   
                     <p class="card-text">
                         {{ $post->get_excerpt }}
                         <a href="{{ route('post', $post) }}">Leer más</a>
@@ -21,6 +23,7 @@
                 </div>
             </div>
             @endforeach
+            {{ $posts->links() }}
         </div>
     </div>
 </div>
