@@ -9,10 +9,14 @@
                 <div class="card-header"> 
                     <h5 class="card-title">{{$post->title}}</h5>
                 </div>
-
                 <div class="card-body">
+                @if($post->image)
+                    <img src="{{ $post->get_image }}" class="card-img-top">
+                @elseif($post->iframe)
+                    {!! $post->iframe !!}
+                @endif
                     <p class="card-text">
-                        {{ $post->get_excerpt }}
+                        {{ $post -> get_excerpt }}
                         <a href="{{ route('post', $post) }}">Leer más</a>
                     </p>
                     <p class="text-muted mb-0">
