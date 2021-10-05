@@ -13,7 +13,10 @@
                 @if($post->image)
                     <img src="{{ $post->get_image }}" class="card-img-top">
                 @elseif($post->iframe)
-                    {!! $post->iframe !!}
+                    <div class="embed-responsive embed-responsive-16by9">
+                        {!! $post->iframe !!}
+                    </div>
+                    
                 @endif
                     <p class="card-text">
                         {{ $post -> get_excerpt }}

@@ -41,7 +41,7 @@ class PostController extends Controller
         //salvar
         $post = Post::create([
             'user_id' => auth()->user()->id
-        ] + $request->validated() );
+        ] + $request->all() );
 
         //image
         if( $request->file('file') ) {

@@ -30,7 +30,7 @@
                         </div>
                         <div class="form-group">
                             <label>Contenido embebido</label>
-                            <textarea class="form-control" name="iframe"></textarea>
+                            <textarea name="iframe" class="form-control"></textarea>
                         </div>
                         <div class="form-group">
                             @csrf
