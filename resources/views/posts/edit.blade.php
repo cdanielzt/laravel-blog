@@ -20,16 +20,17 @@
                             <input type="text" name="title" class="form-control" required value="{{ old('title', $post->title) }}">
                         </div>
                         <div class="form-group">
+                        
                             <label>Image</label>
-                            <input type="file" name="file" class="form-control-file">
+                            <input type="file" name="file" class="form-control-file" >
                         </div>
                         <div class="form-group">
                             <label>Contenido *</label>
                             <textarea name="body" class="form-control" rows="6" required>{{old('body', $post->body)}}</textarea>
                         </div>
                         <div class="form-group">
-                            <label>Contenido embebido *</label>
-                            <textarea name="iframe" class="form-control" required>{{old('iframe', $post->iframe)}}</textarea>
+                            <label>Contenido embebido</label>
+                            <textarea name="iframe" class="form-control">{{old('iframe', $post->iframe)}}</textarea>
                         </div>
                         <div class="form-group">
                             @csrf
