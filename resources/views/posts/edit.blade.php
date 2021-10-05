@@ -20,7 +20,9 @@
                             <input type="text" name="title" class="form-control" required value="{{ old('title', $post->title) }}">
                         </div>
                         <div class="form-group">
-                        
+                        @if($post->image)
+                            <img src="{{ $post->get_image }}" class="card-img-top">
+                        @endif
                             <label>Image</label>
                             <input type="file" name="file" class="form-control-file" >
                         </div>
@@ -29,6 +31,12 @@
                             <textarea name="body" class="form-control" rows="6" required>{{old('body', $post->body)}}</textarea>
                         </div>
                         <div class="form-group">
+                       
+                        @if($post->iframe)
+                            <div class="embed-responsive embed-responsive-16by9">
+                                {!! $post->iframe !!}
+                            </div>
+                        @endif
                             <label>Contenido embebido</label>
                             <textarea name="iframe" class="form-control">{{old('iframe', $post->iframe )}}</textarea>
                         </div>
